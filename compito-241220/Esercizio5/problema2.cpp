@@ -10,10 +10,10 @@ using namespace std;
 int fascia_oraria = 0;
 
 // il numero delle richieste fatte al server
-float numero_di_richieste = 0;
+float numero_di_richieste_per_fascia = 0;
 
 // il numero delle risposte restituite con errori dal server
-float numero_di_richieste_non_esaudite = 0;
+float num_richieste_non_esaudite_per_fascia = 0;
 
 // la soglia minima di risposte corrette/risposte totali che il server deve rispettare
 float percentuale_minima = 95.0;
@@ -46,7 +46,7 @@ int main()
 
     // Stampiamo un messaggio per richiedere il numero di richieste ricevute dal server.
     cout << "Numero di richieste totali ricevute dal server: ";
-    cin >> numero_di_richieste;
+    cin >> numero_di_richieste_per_fascia;
 
     // un ritorno a capo, per fare un po' di spazio
     cout << endl;
@@ -56,17 +56,17 @@ int main()
     while (true)
     {
         // Stampiamo un messaggio per richiedere il numero di richieste ricevute dal server.
-        cout << "Numero di richieste NON esaudite dal server [0-" << numero_di_richieste << "]: ";
-        cin >> numero_di_richieste_non_esaudite;
+        cout << "Numero di richieste NON esaudite dal server [0-" << numero_di_richieste_per_fascia << "]: ";
+        cin >> num_richieste_non_esaudite_per_fascia;
 
         // un ritorno a capo, per fare un po' di spazio
         cout << endl;
 
         // verifichiamo che il valore inserito dall'utente sia coerente ...
-        if (numero_di_richieste_non_esaudite > numero_di_richieste)
+        if (num_richieste_non_esaudite_per_fascia > numero_di_richieste_per_fascia)
         {
             // ... il numero inserito è maggiore del numero di richieste totali. Chiediamo un nuovo valore.
-            cout << "Il numero di richieste non esaudite non può essere maggiore del numero di richieste totali (" << numero_di_richieste << ")! " << endl
+            cout << "Il numero di richieste non esaudite non può essere maggiore del numero di richieste totali (" << numero_di_richieste_per_fascia << ")! " << endl
                  << endl;
         }
         else
@@ -77,7 +77,7 @@ int main()
     }
 
     // abbiamo tutti i dati per calcolare la percentuale di risposte corrette del server:
-    float percentuale_risposte_corrette = ((numero_di_richieste - numero_di_richieste_non_esaudite) / numero_di_richieste) * 100;
+    float percentuale_risposte_corrette = ((numero_di_richieste_per_fascia - num_richieste_non_esaudite_per_fascia) / numero_di_richieste_per_fascia) * 100;
 
     // e possiamo inviare allo schermo il risultato
     cout << "Dalle " << fascia_oraria << ":00 alle " << fascia_oraria + 1 << ":00 percentuale di successo: " << percentuale_risposte_corrette << "% ==> ";
