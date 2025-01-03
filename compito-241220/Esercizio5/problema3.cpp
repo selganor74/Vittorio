@@ -24,7 +24,6 @@ float percentuale_minima = 95.0;
 */
 int random(int min, int max)
 {
-
     // ottiene un numero casuale tra 0 e RAND_MAX
     int random_value = rand();
     // riadattiamo l'intervallo in base ai valori di min e max
@@ -43,6 +42,7 @@ int main()
     cout << "Calcolo della percentuale di risposte corrette vs errate del Server Web" << endl
          << endl;
 
+    // eseguiamo un ciclo per coprire tutte le fasce orarie di un giorno
     for (fascia_oraria = 0; fascia_oraria < 24; fascia_oraria++)
     {
         // usiamo la funzione random per sostituire l'input dell'utente
