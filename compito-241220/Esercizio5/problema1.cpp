@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// il numero da indovinare ! Il problema specifica di crearlo come "costante" 
 const int da_indovinare = 13;
 
 int main()
