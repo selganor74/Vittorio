@@ -5,7 +5,7 @@
     1 Visualizza un messaggio di benvenuto
     2 Richiedi il valore dell'estremo A (intero positivo o negativo)
     3 Richiedi il valore dell'estremo B (intero positivo o negativo) assicurandoti che sia maggiore o uguale ad A
-    4 per ogni valore n compreso tra A e B
+    4 Per ogni valore n compreso tra A e B
     5   Visualizza n
 
 */
