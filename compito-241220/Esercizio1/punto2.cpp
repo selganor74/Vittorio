@@ -21,13 +21,15 @@ int B;
 int main()
 {
     // un messaggio di "benvenuto" che spieghi all'utente cosa fa il programma
-    cout << "Visualizza tutti i numeri interi un intervallo [A, B] dove A e B possono essere positivi e/o negativi" << endl
+    cout << endl
+         << "Visualizza tutti i numeri interi in un intervallo [A, B] dove A e B possono essere positivi e/o negativi" << endl
          << endl;
 
     // richiesta dell'estremo A
     cout << "Inserisci l'estremo A: ";
     cin >> A;
 
+    // loop infinito! finché l'utente non inserisce un numero "valido", non si esce!
     while (true)
     {
         // richiesta dell'estremo B
@@ -41,7 +43,7 @@ int main()
             break;
         }
 
-        // altrimenti visualizziamo un errore e richiediamo l'input
+        // altrimenti visualizziamo un errore ed il ciclo while si ripete
         cout << endl
              << "L'estremo B deve essere maggiore o uguale all'estremo A (" << A << ")." << endl
              << endl;
