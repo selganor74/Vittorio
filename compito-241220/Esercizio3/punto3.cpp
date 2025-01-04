@@ -19,7 +19,7 @@ int main()
 
     Fornisci una breve spiegazione:
 
-    Usando while() invece di do...while() Il controllo sul valore del numero viene 
+    Usando while() invece di do...while() il controllo sul valore del numero viene 
     eseguito all'inizio del ciclo. Se il controllo fallisce il ciclo non viene MAI
     eseguito. Usando do...while() invece, il ciclo viene eseguito almeno una volta.
     
