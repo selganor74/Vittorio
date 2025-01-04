@@ -1,3 +1,49 @@
+/*
+    1. Simulazione input e output
+
+    Esempio 1
+
+        Percentuale di soglia = 95%
+
+        Fascia oraria: 18
+        Numero richieste Totali: 1000
+        Numero richieste Errate:  100
+
+        numero richieste corrette = Numero richieste Totali - Numero richieste Errate               =>  1000 - 100 = 900
+        percentuale di successo   = ( numero richieste corrette / Numero richieste Totali ) * 100   =>  ( 900 / 1000 ) * 100 = 90%  
+
+        Nella fascia oraria 18:00 - 18:59 la pecentuale di successo è 90% ( < 95% ) KO 👎
+
+
+
+    Esempio 2
+
+        Percentuale di soglia = 95%
+
+        Fascia oraria: 18
+        Numero richieste Totali: 1000
+        Numero richieste Errate:   10
+
+        numero richieste corrette = Numero richieste Totali - Numero richieste Errate               =>  1000 - 10 = 990
+        percentuale di successo   = ( numero richieste corrette / Numero richieste Totali ) * 100   =>  ( 990 / 1000 ) * 100 = 99%  
+
+        Nella fascia oraria 18:00 - 18:59 la pecentuale di successo è 99% ( >= 95% ) OK! 👍
+
+    
+    2. Algoritmo
+
+    * Visualizza un messaggio di benvenuto e la percentuale di successo impostata come soglia
+    * Richiedi la fascia oraria e controlla che sia un numero compreso tra 0 e 23
+    * Richiedi il numero di richieste totali per la fascia oraria
+    * Richiedi il numero di richieste ERRATE per la fascia oraria 
+    * Calcola la percentuale di successo
+    * Se la percentuale di successo calcolata è minore della percentuale impostata come soglia 
+    *   allora visualizza le statistiche con un KO
+    *   altrimenti visualizza le statistiche con un OK!
+    
+
+ */
+
 #include <iostream>
 
 using namespace std;
