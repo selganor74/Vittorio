@@ -40,13 +40,14 @@
     * Se la percentuale di successo calcolata è minore della percentuale impostata come soglia
     *   allora visualizza le statistiche con un KO
     *   altrimenti visualizza le statistiche con un OK!
-
-
  */
 
 #include <iostream>
 
 using namespace std;
+
+// la soglia minima di risposte corrette/risposte totali che il server deve rispettare
+const float percentuale_minima = 95.0;
 
 // conterrà la fascia oraria richiesta dall'utente.
 // 0 (da mezzanotte alle una)
@@ -60,9 +61,6 @@ float numero_di_richieste_per_fascia = 0;
 
 // il numero delle risposte restituite con errori dal server
 float num_richieste_non_esaudite_per_fascia = 0;
-
-// la soglia minima di risposte corrette/risposte totali che il server deve rispettare
-float percentuale_minima = 95.0;
 
 int main()
 {
