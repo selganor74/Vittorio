@@ -32,14 +32,14 @@
 
     2. Algoritmo
 
-    * Visualizza un messaggio di benvenuto e la percentuale di successo impostata come soglia
-    * Richiedi la fascia oraria e controlla che sia un numero compreso tra 0 e 23
-    * Richiedi il numero di richieste totali per la fascia oraria
-    * Richiedi il numero di richieste ERRATE per la fascia oraria
-    * Calcola la percentuale di successo
-    * Se la percentuale di successo calcolata è minore della percentuale impostata come soglia
-    *   allora visualizza le statistiche con un KO
-    *   altrimenti visualizza le statistiche con un OK!
+        * Visualizza un messaggio di benvenuto e la percentuale di successo impostata come soglia
+        * Richiedi la fascia oraria e controlla che sia un numero compreso tra 0 e 23
+        * Richiedi il numero di richieste totali per la fascia oraria
+        * Richiedi il numero di richieste ERRATE per la fascia oraria
+        * Calcola la percentuale di successo
+        * Se la percentuale di successo calcolata è minore della percentuale impostata come soglia
+        *   allora visualizza le statistiche con un KO
+        *   altrimenti visualizza le statistiche con un OK!
  */
 
 #include <iostream>

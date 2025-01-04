@@ -1,9 +1,56 @@
+/*
+    1. Simulazione input e output
+
+    Esempio 1
+
+        ( numero pensato: 13 )
+
+        Ho pensato ad un numero tra 1 e 20 (estremi compresi)
+        Prova ad indovinarlo !
+
+        Fai il tuo tentativo [inserisci 0 o premi CTRL+C per smettere di giocare]: 10
+        
+        No, non hai indovinato! Il tuo tentativo è troppo basso
+
+        Fai il tuo tentativo [inserisci 0 o premi CTRL+C per smettere di giocare]: 15
+
+        No, non hai indovinato! Il tuo tentativo è troppo alto
+
+        Fai il tuo tentativo [inserisci 0 o premi CTRL+C per smettere di giocare]: 13
+
+        Bravo, hai indovinato in 3 tentativo/i
+
+    Esempio 2
+
+        Ho pensato ad un numero tra 1 e 20 (estremi compresi)
+        Prova ad indovinarlo !
+
+        Fai il tuo tentativo [inserisci 0 o premi CTRL+C per smettere di giocare]: 0
+        
+        Sarà per la prossima volta!
+
+        Ciao!
+
+
+    2. Algoritmo
+
+        * Visualizza un messaggio di benvenuto
+        * inizio del loop
+            * Richiedi il valore del tentativo e controlla che sia compreso tra 0 e 20
+            * Incrementa il contatore del numero di tentativi.
+            * Se il tentativo è 0 saluta con "Sarà per la prossima volta" ed esci dal loop (e dal programma)
+            * Se il tentativo è uguale al numero pensato
+            *   allora rispondi con "Bravo, hai indovinato" insieme al numero di tentativi fatti ed esci dal loop (e dal programma)
+            *   altrimenti rispondi dicendo se il numero è troppo alto o troppo basso e ritorna a "inizio del loop"
+
+*/
+
 #include <iostream>
 
 using namespace std;
 
 // il numero da indovinare ! Il problema specifica di crearlo come "costante" 
-const int da_indovinare = 13;
+const int numero_pensato = 13;
 
 int main()
 {
@@ -46,7 +93,7 @@ int main()
         }
 
         // se l'utente ha indovinato ...
-        if (tentativo == da_indovinare)
+        if (tentativo == numero_pensato)
         {
             // stampiamo un messaggio ed interrompiamo il loop
             cout << "Bravo, hai indovinato in " << num_tentativi << " tentativo/i" << endl;
@@ -57,7 +104,7 @@ int main()
             // l'utente non ha indovinato ...
             cout << "No, non hai indovinato! ";
             
-            if (tentativo < da_indovinare)
+            if (tentativo < numero_pensato)
             {
                 // ... inserendo un valore troppo basso
                 cout << "Il tuo tentativo è troppo basso!";
