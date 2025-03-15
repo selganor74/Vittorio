@@ -104,12 +104,12 @@ void esegui_modifica_libro()
 void mostra_libro(libro da_mostrare)
 {
     cout << "----------------------------------------------------------------------" << endl;
-    cout << "id: " << da_mostrare.id << endl;
-    cout << "Titolo: " << da_mostrare.titolo << endl;
-    cout << "Autore: " << da_mostrare.autore_cognome << " " << da_mostrare.autore_nome << endl;
+    cout << "                id: " << da_mostrare.id << endl;
+    cout << "            Titolo: " << da_mostrare.titolo << endl;
+    cout << "            Autore: " << da_mostrare.autore_cognome << " " << da_mostrare.autore_nome << endl;
     cout << "Data Pubblicazione: " << da_mostrare.data_pubblicazione << endl;
-    cout << "Casa Editrice: " << da_mostrare.casa_editrice << endl;
-    cout << "Prezzo di Vendita: " << da_mostrare.prezzo_di_vendita << endl;
+    cout << "     Casa Editrice: " << da_mostrare.casa_editrice << endl;
+    cout << " Prezzo di Vendita: " << da_mostrare.prezzo_di_vendita << endl;
 }
 
 void esegui_ricerca_per_prezzo()
