@@ -25,7 +25,7 @@ void aggiungi_libro(libro da_aggiungere)
     prossimo_id++;
 }
 
-void carica_dati_di_test()
+void crea_dati_di_test()
 {
     aggiungi_libro({1, "Il Nome della Rosa", "01/01/1980", "Umberto", "Eco", "Bompiani", 15.00});
     aggiungi_libro({2, "Cent'anni di solitudine", "01/01/1967", "Gabriel", "García Márquez", "Feltrinelli", 18.00});
@@ -185,7 +185,7 @@ Entry point dell'applicazione.
 int main()
 {
     // Crea dei dati di test
-    carica_dati_di_test();
+    crea_dati_di_test();
 
     int scelta = -1;
     do
