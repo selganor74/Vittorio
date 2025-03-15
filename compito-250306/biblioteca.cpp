@@ -155,6 +155,7 @@ void esegui_scelta(int scelta)
     switch (scelta)
     {
     case 0: // Esci
+        cout << endl << "Arrivederci !" << endl << endl;
         break;
 
     case 1: // Aggiungi un libro
