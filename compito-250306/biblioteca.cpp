@@ -56,22 +56,29 @@ int attendi_scelta()
 {
     int scelta;
     cout << "Fai la tua scelta: ";
-    cin >> scelta;
     return scelta;
 }
 
 void esegui_aggiungi_libro()
 {
     libro da_aggiungere;
-    cout << "Titolo: ";
+
+    cout << "                        Titolo: ";
     cin >> da_aggiungere.titolo;
-    cout << "Autore, Nome: ";
+
+    cout << "                  Autore, Nome: ";
     cin >> da_aggiungere.autore_nome;
-    cout << "Autore, Cognome: ";
+
+    cout << "               Autore, Cognome: ";
     cin >> da_aggiungere.autore_cognome;
+
     cout << "Data Pubblicazione [gg/mm/aaa]: ";
     cin >> da_aggiungere.data_pubblicazione;
-    cout << "Prezzo di Vendita: ";
+
+    cout << "                 Casa Editrice: ";
+    cin >> da_aggiungere.casa_editrice;
+
+    cout << "             Prezzo di Vendita: ";
     cin >> da_aggiungere.prezzo_di_vendita;
 
     aggiungi_libro(da_aggiungere);
